@@ -1,0 +1,60 @@
+//内核处理
+@mixin styles($type, $val) {
+    -webkit-#{$type}: $val;
+    -ms-#{$type}: $val;
+    -moz-#{$type}: $val;
+    -o-#{$type}: $val;
+}
+
+
+// 弹性盒
+@mixin flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// 弹性盒，水平、垂直居中
+@mixin flex-r-center-c-center{
+  @include flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// 清除浮动
+@mixin clearfix {
+    *zoom: 1;
+    &:after {
+      content: "";
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+}
+
+
+//文字超出几行显示省略号
+@mixin ellipsis-multi($line) {
+    //     display: -webkit-box; //将对象作为弹性伸缩盒子模型显示
+    //   -webkit-box-orient: vertical; //设置或检索伸缩盒对象的子元素的排列方式
+    //   -webkit-line-clamp: 3; //用来限制在一个块元素显示的文本的行数
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}  
+
+// social页的icon颜色的处理
+@mixin icon-color($color: #666) {
+  border-color: $color;
+  i{
+      color: $color;
+  }
+}

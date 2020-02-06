@@ -1,0 +1,16 @@
+//space
+
+$space: 20px;
+
+$space-quarter: round($space / 4);
+$space-half: round($space / 2);
+$space-double: $space*2;
+$space-triple: $space*3;
+$space-quad: $space*4;
+
+// break point
+$extra-small-breakpoint: 320px;
+$small-breakpoint: 375px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 1024px;
+$extar-large-breakpoint: 1400px;
