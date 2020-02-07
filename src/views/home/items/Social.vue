@@ -86,6 +86,7 @@ export default {
 }
 .social__list{
   @include flex;
+  justify-content: center;
   .social__list-item{
     width: 70px;
     height: 70px;
@@ -140,4 +141,9 @@ export default {
     }
   }
 }
+  @media screen and (max-width: 374px) {
+    .social__list{
+      flex-wrap: wrap;
+    }
+  }
 </style>
